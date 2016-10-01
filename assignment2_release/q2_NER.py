@@ -22,7 +22,7 @@ class Config(object):
   batch_size = 64
   label_size = 5
   hidden_size = 100
-  max_epochs = 24 
+  max_epochs = 1
   early_stopping = 2
   dropout = 0.9
   lr = 0.001
@@ -37,7 +37,7 @@ class NERModel(LanguageModel):
   the standard Model method.
   """
 
-  def load_data(self, debug=False):
+  def load_data(self, debug=True):
     """Loads starter word-vectors and train/dev/test data."""
     # Load the starter word vectors
     self.wv, word_to_num, num_to_word = ner.load_wv(
